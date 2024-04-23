@@ -8,5 +8,5 @@ form.addEventListener('submit', function(e){
     console.log("submit");
 
     const tasktext = taskInput.value;
-    // console.log(tasktext);
+   console.log(tasktext);
 })
