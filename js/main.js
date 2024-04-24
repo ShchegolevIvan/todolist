@@ -1,5 +1,7 @@
 const form = document.querySelector('#form');
 const taskInput = document.querySelector('#taskInput');
+const emptylist = document.querySelector('#emptyList');
+const tasksList = document.querySelector('#tasksList');
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -22,4 +24,17 @@ form.addEventListener('submit', function(e){
                         </li>` ;
 
     tasksList.insertAdjacentHTML('beforeend', taskHTML);
+
+    taskInput.value = '' ;
+    taskInput.focus() ;
+
+    if (tasksList.children.length > 1) {
+        emptylist.classList.add('none');
+        }
+   
+
 })
+
+
+
+
